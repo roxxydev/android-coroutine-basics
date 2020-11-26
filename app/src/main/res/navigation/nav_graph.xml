@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.android.coroutinebasics.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_basicCoroutineFragment"
+            app:destination="@id/basicCoroutineFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_mainFragment_to_completableJobFragment"
+            app:destination="@id/completableJobFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_parallelTasksFragment"
+            app:destination="@id/parallelTasksFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_handlingExceptionFragment"
+            app:destination="@id/handlingExceptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicCoroutineFragment"
+        android:name="com.android.coroutinebasics.BasicCoroutineFragment"
+        android:label="fragment_basic_coroutine"
+        tools:layout="@layout/fragment_basic_coroutine" />
+    <fragment
+        android:id="@+id/completableJobFragment"
+        android:name="com.android.coroutinebasics.CompletableJobFragment"
+        android:label="fragment_completable_job"
+        tools:layout="@layout/fragment_completable_job" />
+    <fragment
+        android:id="@+id/parallelTasksFragment"
+        android:name="com.android.coroutinebasics.ParallelTasksFragment"
+        android:label="ParallelTasks" />
+    <fragment
+        android:id="@+id/handlingExceptionFragment"
+        android:name="com.android.coroutinebasics.HandlingExceptionFragment"
+        android:label="fragment_handling_exception"
+        tools:layout="@layout/fragment_handling_exception" />
+</navigation>
